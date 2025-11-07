@@ -1,0 +1,7 @@
+[global]
+background = "#2e3440"
+foreground = "#d8dee9"
+frame_width = 0
+
+[urgency_low]
+timeout = 2

@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 25,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces", "wireplumber", "backlight"],
+    "modules-center": ["mpris"],
+    "modules-right": ["custom/notification","battery", "network","clock", "tray"],
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%m/%d/%Y %H:%M}"
+    },
+    "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted {icon}",
+    "tooltip": true,
+    "max-volume": 100,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+    "node-type": "Audio/Sink", // or "Audio/Source" for microphone
+    "states": {
+        "warning": 0,
+        "critical": 20,
+        "full": 100
+    },
+    "max-volume": 150 // Allow volume above 100%
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": " {}%"
+    },
+    
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": " connected",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    
+    "pulseaudio": {
+        "format": "󰕿{volume}%",
+        "format-bluetooth": "󰂯 {volume}% ",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "󰸈",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰂯",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [" ", "󰖨 "]
+    },
+    "tray": {
+        "spacing": 10
+    },
+	"app_ids-mapping": {
+		"firefoxdeveloperedition": "firefox-developer-edition"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal"
+	}
+    },
+    "mpris": {
+        "format": "{artist}  {title}",
+        "format-playing": "{artist}  {title}",
+        "format-paused": "{artist}  {title}",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "player-icons": {
+            "hifirs": "",
+            "default": "  ",
+            "spotify": "  ",
+            "vlc": "  ",
+            "firefox": "",
+            "strawberry": "󰫔"
+        },
+        "status-icons": {
+            "paused": ""
+        },
+    },
+        "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}+ {icon}",
+        "format-plugged": "{capacity}+ {icon}",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+}

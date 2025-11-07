@@ -1,0 +1,158 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "FiraMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #2e3440;
+    border: 2px solid #3b4252;
+    color: #d8dee9;
+    margin: 12px 16px 8px 16px;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+
+    border-bottom: 2px solid #2e3440;
+    color: #A3BE8C;
+}
+
+#workspaces button:hover {
+    background: #3b4252;
+    color: #8FBCBB;
+}
+
+#workspaces button.focused {
+    border-bottom: 2px solid #88C0D0;
+    background-color: #3B4252;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background-color: #fb4934;
+    color: #2e3440;
+}
+
+#mode {
+    background-color: #fe8019;
+    color: #2e3440;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+#clock {
+    color: #81a1c1;
+    border-bottom: 2px solid #81a1c1;
+    padding: 0 10px;
+}
+
+#battery {
+    background-color: transparent;
+    color: #8FBCBB;
+    border-bottom: 2px solid #8FBCBB;
+    padding: 0 10px;
+}
+
+#cpu {
+    color: #5E81AC;
+    padding: 0 10px;
+}
+
+#memory {
+    color: #83a598;
+    padding: 0 10px;
+}
+
+#network {
+    color: #B48EAD;
+    border-bottom: 2px solid #B48EAD;
+    padding: 0 10px;
+}
+
+#network.disconnected {
+    color: #fb4934;
+}
+
+#wireplumber {
+    color: #83a598;
+    background-color: transparent;
+    border-bottom: 2px solid #83a598;
+    padding: 0 10px;
+}
+
+#wireplumber.muted {
+    color: #Bf616A;
+    border-bottom: 2px solid #Bf616a;
+}
+
+#tray {
+    padding: 0 10px;
+    border-bottom: 2px solid #a3be8c;
+}
+
+#tray > .passive {
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    opacity: 1.0;
+    background-color: #fb4934;
+}
+#backlight {
+    color: #EBCB8B;
+    border-bottom: 2px solid #EBCB8B;
+}
+
+#mpris {
+    color: #88C0D0;
+    border-bottom: 2px solid #88C0D0;
+}
+
+tooltip {
+    background: #3b4252;
+    border: 1px solid #3b4252;
+    border-radius: 5px;
+    color: #d8dee9;
+}
+
+tooltip label {
+    color: #d8dee9;
+}
+
+#custom-notification {
+    color: #A3BE8C;
+    padding: 0 10px;
+}
+
+#custom-notification.notification {
+    color: #b48ead;
+}
+
+#custom-notification.dnd {
+    color: #928374;
+}
+
+#custom-notification.dnd-notification {
+    color: #fb4934;
+}
+
+#wlr-taskbar button {
+   padding: 0 5px;
+   margin: 0 3px;
+}
+
+
+#wlr-taskbar button.active {
+    border-bottom: 2px solid #A3BE8C;
+    background-color: #495366;
+}
