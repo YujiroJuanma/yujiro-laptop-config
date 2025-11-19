@@ -1,4 +1,3 @@
-# My config files for my laptop swayFX setup.
-
-Similiar to my PC configs, just with a few changes to better suit a laptop workflow(and using nord colors).
-_As with the PC config, feel free to use as you see fit(see LICENSE)_
+# My laptop riverwm config!
+## Shares some similarities with my old swaywm setup, just on river!
+Same license, same deal. Do whatever, _I'm not responsible for any breaking though._
