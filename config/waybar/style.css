@@ -2,15 +2,14 @@
     border: none;
     border-radius: 0;
     font-family: "FiraMono Nerd Font", monospace;
-    font-size: 13px;
+    font-size: 12px;
+    margin-right: 5px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: #2e3440;
-    border: 2px solid #3b4252;
-    color: #d8dee9;
-    margin: 12px 16px 8px 16px;
+    background-color: rgba(45, 53, 59, 1);
+    color: #d3c6aa;
 }
 
 button {
@@ -23,24 +22,22 @@ button {
     padding: 0 8px;
     background-color: transparent;
 
-    border-bottom: 2px solid #2e3440;
-    color: #A3BE8C;
+    color: #525963;
 }
 
 #workspaces button:hover {
-    background: #3b4252;
-    color: #8FBCBB;
+    background: #3D484D;
+    color: #7fbbb3;
 }
 
 #workspaces button.focused {
-    border-bottom: 2px solid #88C0D0;
-    background-color: #3B4252;
     font-weight: bold;
+    color: #d3c6aa;
 }
 
 #workspaces button.urgent {
-    background-color: #fb4934;
-    color: #2e3440;
+    background-color: #e67e80;
+    color: #FFFFFF;
 }
 
 #mode {
@@ -51,15 +48,15 @@ button {
 }
 
 #clock {
-    color: #81a1c1;
-    border-bottom: 2px solid #81a1c1;
-    padding: 0 10px;
+    color: #83c092;
+    padding: 2 10px;
+    border-bottom: 2px solid #83c092;
 }
 
 #battery {
     background-color: transparent;
-    color: #8FBCBB;
-    border-bottom: 2px solid #8FBCBB;
+    border-bottom: 2px solid #a7c080;
+    color: #a7c080;
     padding: 0 10px;
 }
 
@@ -75,7 +72,6 @@ button {
 
 #network {
     color: #B48EAD;
-    border-bottom: 2px solid #B48EAD;
     padding: 0 10px;
 }
 
@@ -84,20 +80,19 @@ button {
 }
 
 #wireplumber {
-    color: #83a598;
+    color: #d699b6;
     background-color: transparent;
-    border-bottom: 2px solid #83a598;
+    border-bottom: 2px solid #d699b6;
     padding: 0 10px;
 }
 
 #wireplumber.muted {
-    color: #Bf616A;
-    border-bottom: 2px solid #Bf616a;
+    color: #e67e80;
+    border-bottom: 2px solid #e67e80;
 }
 
 #tray {
     padding: 0 10px;
-    border-bottom: 2px solid #a3be8c;
 }
 
 #tray > .passive {
@@ -109,13 +104,13 @@ button {
     background-color: #fb4934;
 }
 #backlight {
-    color: #EBCB8B;
-    border-bottom: 2px solid #EBCB8B;
+    color: #dbbc7f;
+    border-bottom: 2px solid #dbbc7f;
 }
 
 #mpris {
-    color: #88C0D0;
-    border-bottom: 2px solid #88C0D0;
+    color: #e69875;
+    border-bottom: 2px solid #e69875;
 }
 
 tooltip {
@@ -156,3 +151,24 @@ tooltip label {
     border-bottom: 2px solid #A3BE8C;
     background-color: #495366;
 }
+
+#tags button {
+    padding: 0 4px;
+    color: #d8dee9;
+    border: none;
+    font-family: "FiraMono Nerd Font", monospace;
+    font-size: 12px;
+    margin-right: 5px;
+    border-bottom: 2px solid rgba(45, 53, 59, 1);
+}
+
+#tags button.occupied {
+    font-weight: bold;
+    border-bottom: 2px solid #dbbc7f;
+    color: #dbbc7f;
+}
+
+#tags button.focused {
+    border-bottom: 2px solid #A3BE8C;
+}
+

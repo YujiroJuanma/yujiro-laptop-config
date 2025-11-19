@@ -3,16 +3,17 @@
     "position": "top",
     "height": 25,
     "spacing": 4,
-    "modules-left": ["sway/workspaces", "wireplumber", "backlight"],
-    "modules-center": ["mpris"],
-    "modules-right": ["custom/notification","battery", "network","clock", "tray"],
+    "modules-left": ["river/tags", "wireplumber", "backlight"],
+    "modules-center": ["river/window"],
+    "modules-right": ["custom/notification","battery","clock", "tray"],
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%m/%d/%Y %H:%M}"
     },
     "wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-muted": "Muted {icon}",
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
     "tooltip": true,
     "max-volume": 100,
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
@@ -34,6 +35,16 @@
     "memory": {
         "format": " {}%"
     },
+    "river/tags": {
+    "format": "{icon}",
+    "num-tags": 4,
+    "format-icons": {
+        "occupied": "●",
+        "focused": "",
+        "default": "○"
+    },
+    "on-click": "riverctl set-focused-tags $NAME"
+    },
     
     "network": {
         "format-wifi": "",
@@ -43,7 +54,7 @@
         "format-disconnected": "⚠ Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    
+
     "pulseaudio": {
         "format": "󰕿{volume}%",
         "format-bluetooth": "󰂯 {volume}% ",
@@ -70,18 +81,11 @@
     "tray": {
         "spacing": 10
     },
-	"app_ids-mapping": {
-		"firefoxdeveloperedition": "firefox-developer-edition"
-	},
-	"rewrite": {
-		"Firefox Web Browser": "Firefox",
-		"Foot Server": "Terminal"
-	}
-    },
     "mpris": {
-        "format": "{artist}  {title}",
-        "format-playing": "{artist}  {title}",
-        "format-paused": "{artist}  {title}",
+        "format": "{artist}-{title} [{position}/{length}]",
+        "format-playing": "{artist} - {title} [{position}/{length}]",
+        "format-paused": "{artist} - {title}",
+        "interval": 1,
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
@@ -97,18 +101,19 @@
             "paused": ""
         },
     },
-        "battery": {
+    "battery": {
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}+ {icon}",
-        "format-plugged": "{capacity}+ {icon}",
+        "format-charging": "+{capacity}% {icon}",
+        "format-plugged": "++{capacity} {icon}",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+        "format-icons-charging": ["󰢜", "󰂇", "󰢝", "󰢞", "󰂄"]
     },
 }
