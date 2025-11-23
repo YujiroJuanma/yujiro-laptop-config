@@ -1,3 +1,2 @@
-# In keeping with the theme, I kept most of the sane defaults of the base init.
-## I mainly changed some of the binds, added a preference for server side decorations, and added all my startups.
-I also changed the language to zsh.
+# Barebones river config. Written in python.
+Why python? No clue really, I just felt like a shell script was kinda boring. Realistically probably more efficient to do it in sh as im mainly just running shell commands but its more fun this way.
