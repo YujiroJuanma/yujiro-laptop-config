@@ -10,6 +10,8 @@
 #in python because why the hell not, shell is boring imo
 
 
+#keybinds are stored in keybindings.py and autostart programs are stored in autostarts.py
+
 import subprocess 
 import time
 
@@ -45,5 +47,27 @@ run_command("riverctl border-width 2")
 run_command("riverctl input pointer-1160-4180-CRQ1080:00_0488:1054_Touchpad tap enabled")
 
 #set up layout
-run_command("/home/yujirodogma/.config/river/set_up_layout.sh")
+command_for_layout = """
+riverctl default-layout wideriver
+wideriver \
+    --layout                       left        \
+    --layout-alt                   monocle     \
+    --stack                        dwindle     \
+    --count-master                 1           \
+    --ratio-master                 0.50        \
+    --count-wide-left              0           \
+    --ratio-wide                   0.35        \
+    --no-smart-gaps                            \
+    --inner-gaps                   2           \
+    --outer-gaps                   2           \
+    --border-width                 4           \
+    --border-width-monocle         0           \
+    --border-width-smart-gaps      0           \
+    --border-color-focused         "0x83c092"  \
+    --border-color-focused-monocle "0x83c092"  \
+    --border-color-unfocused       "0x3b4252"  \
+    --log-threshold                info        \
+   > "/tmp/wideriver.${XDG_VTNR}.${USER}.log" 2>&1 &
+"""
+run_command(command_for_layout)
 run_command("riverctl send-layout-cmd wideriver '--layout left --stack dwindle --count 1 --ratio 0.5'")
