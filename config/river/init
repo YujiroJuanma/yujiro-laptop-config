@@ -14,7 +14,7 @@
 
 import subprocess 
 import time
-
+import os
 def run_command(command):
     """Helper function to run shell commands."""
     try:
@@ -27,12 +27,9 @@ def run_command(command):
         print(f"Command not found: {command.split()[0]}")
 
 #run my keybindings file
-with open("/home/yujirodogma/.config/river/keybindings.py", "r") as f:
-    exec(f.read())
-
+subprocess.run(['python', '/home/yujirodogma/.config/river/keybindings.py'])
 #run my autostarts file
-with open("/home/yujirodogma/.config/river/autostarts.py", "r") as f:
-    exec(f.read())
+subprocess.run(['python', '/home/yujirodogma/.config/river/autostarts.py'])
 
 
 
@@ -45,6 +42,7 @@ run_command("riverctl border-color-focused 0x83c092")
 run_command("riverctl border-color-unfocused 0x3b4252")
 run_command("riverctl border-width 2")
 run_command("riverctl input pointer-1160-4180-CRQ1080:00_0488:1054_Touchpad tap enabled")
+run_command("riverctl xcursor-theme 'everforest-cursors' 24")
 
 #set up layout
 command_for_layout = """
@@ -58,8 +56,8 @@ wideriver \
     --count-wide-left              0           \
     --ratio-wide                   0.35        \
     --no-smart-gaps                            \
-    --inner-gaps                   2           \
-    --outer-gaps                   2           \
+    --inner-gaps                   4           \
+    --outer-gaps                   4           \
     --border-width                 4           \
     --border-width-monocle         0           \
     --border-width-smart-gaps      0           \
