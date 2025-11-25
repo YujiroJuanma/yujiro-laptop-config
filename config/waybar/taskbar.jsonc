@@ -1,0 +1,44 @@
+{
+  // General Waybar config
+  "layer": "top",
+  "position": "bottom",
+  "margin": 0,
+  "padding": 0,
+  "height": 25,
+  "radius": 0,
+  "modules-left": [
+    "cpu"
+  ],
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "modules-right": [
+    "memory"
+  ],
+  "wlr/taskbar": {
+  "format": "{icon}",
+  "all-outputs": false,
+  "markup": true,
+  "icon-theme": "Flat-Remix-Green-Dark", // Or your preferred icon theme
+  "icon-size": 20,
+  "tooltip": true,
+  "active-first": true,
+  "on-click": "activate",
+  "on-click-right": "close",
+  "ignore-list": [
+    "Conky" // Example of an app to ignore
+  ],
+  "app_ids-mapping": {
+    "org.gnome.Nautilus": "Files", // Example of mapping app_id to a custom name
+    "vivaldi-stable": "vivaldi"
+  }
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%"
+  },
+  "memory": {
+    "format": "RAM {used} / {total} GB"
+  },
+}
+

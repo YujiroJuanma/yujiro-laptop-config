@@ -43,6 +43,8 @@ run_command("riverctl border-color-unfocused 0x3b4252")
 run_command("riverctl border-width 2")
 run_command("riverctl input pointer-1160-4180-CRQ1080:00_0488:1054_Touchpad tap enabled")
 run_command("riverctl xcursor-theme 'everforest-cursors' 24")
+run_command("export QT_QPA_PLATFORMTHEME=qt6ct")
+run_command("export QT_QPA_PLATFORM=wayland")
 
 #set up layout
 command_for_layout = """
@@ -58,7 +60,7 @@ wideriver \
     --no-smart-gaps                            \
     --inner-gaps                   4           \
     --outer-gaps                   4           \
-    --border-width                 4           \
+    --border-width                 2           \
     --border-width-monocle         0           \
     --border-width-smart-gaps      0           \
     --border-color-focused         "0x83c092"  \

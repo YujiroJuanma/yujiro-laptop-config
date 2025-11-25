@@ -1,4 +1,3 @@
-#!/bin/python
 #autostart all my programs
 
 
@@ -23,10 +22,10 @@ def run_command(command):
 run_command("swaybg -i ~/Pictures/foggy_valley_1.png")
 run_command("/usr/bin/brillo -S 95")
 run_command("/usr/bin/wireplumber")
-time.sleep(1)
+time.sleep(0.5) # sleep to give audio server time to catch up
 run_command("/usr/bin/pipewire ")
-time.sleep(1)
 run_command("/usr/bin/waybar ")
+run_command("/usr/bin/waybar --config /home/yujirodogma/.config/waybar/taskbar.jsonc --style /home/yujirodogma/.config/waybar/taskbar.css")
 run_command("/usr/bin/lxsession ")
 run_command("/usr/bin/mako ")
 run_command("~/scripts/music/spt_status_notify.zsh ")

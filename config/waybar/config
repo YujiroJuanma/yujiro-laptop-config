@@ -3,9 +3,9 @@
     "position": "top",
     "height": 25,
     "spacing": 4,
-    "modules-left": ["river/tags", "wireplumber", "backlight"],
+    "modules-left": ["river/tags", "mpris" ],
     "modules-center": ["river/window"],
-    "modules-right": ["custom/notification","battery","clock", "tray"],
+    "modules-right": ["backlight", "battery","clock","wireplumber", "tray"],
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%m/%d/%Y %H:%M}"

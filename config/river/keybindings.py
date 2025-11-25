@@ -1,5 +1,3 @@
-#!/bin/python
-
 #All my keybindings
 
 import subprocess
@@ -23,6 +21,7 @@ run_command("riverctl map normal Super+Shift E spawn ~/.config/rofi/powermenu/ty
 run_command("riverctl map normal Super D spawn ~/.config/rofi/launchers/type-1/launcher.sh")
 run_command("riverctl map normal Super S spawn ~/scripts/spotify_launch.sh")
 run_command("riverctl map normal Super A spawn ~/scripts/nvim_launch.sh")
+run_command("riverctl map normal Super M spawn kdeconnect-sms")
 
 
 #keybinds for window/focus control.
@@ -33,6 +32,8 @@ run_command("riverctl map normal Super K focus-view previous")
 run_command("riverctl map normal Super F toggle-fullscreen")
 run_command("riverctl map normal Super Space toggle-float")
 run_command("riverctl map normal Super Q close")
+run_command("riverctl map-pointer normal Super BTN_LEFT move-view")
+run_command("riverctl map-pointer normal Super BTN_RIGHT resize-view")
 
 #workspace/tag setup!
 # Map tags to keys
@@ -51,6 +52,7 @@ run_command("riverctl map normal None XF86AudioMedia spawn 'playerctl play-pause
 run_command("riverctl map normal None XF86AudioPrev  spawn 'playerctl previous'")
 run_command("riverctl map normal None XF86AudioStop spawn 'playerctl stop'")
 run_command("riverctl map normal None XF86AudioNext  spawn 'playerctl next'")
+run_command("riverctl map normal None XF86AudioPlay spawn 'playerctl play-pause'")
 run_command("riverctl map -repeat normal None XF86MonBrightnessUp   spawn 'brillo -A 5'")
 run_command("riverctl map -repeat normal None XF86MonBrightnessDown spawn 'brillo -U 5'")
 
