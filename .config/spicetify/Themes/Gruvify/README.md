@@ -1,1 +1,1 @@
-# All credit for this spotify theme goes to github.com/Skaytacium/Gruvify
+# All credit for this spotify theme goes to https://github.com/Skaytacium/Gruvify
