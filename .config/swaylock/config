@@ -1,0 +1,18 @@
+# Background color (dark hard)
+color=282828
+
+# Indicator colors
+indicator-caps-lock=d79921    # Yellow
+indicator-caps-lock-text=1d2021 # Background for caps lock text
+indicator-verifying=458588    # Blue
+indicator-wrong=cc241d      # Red
+indicator-background=1d2021   # Background of the indicator itself
+indicator-text=ebdbb2       # Text color on the indicator
+
+# Text colors
+text-color=ebdbb2
+
+# Optional: Enable effects if using swaylock-effects
+# image=/path/to/your/gruvbox_wallpaper.png
+# blur=7x5
+# scale=fit

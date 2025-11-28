@@ -1,0 +1,26 @@
+#all my autostarted programs/scripts go here.
+
+#change brightness to acceptable level
+exec "brightnessctl s 90%"
+
+#lightweight notification daemon
+exec "mako"
+
+#autotiling feature to sway
+exec_always "autotiling"
+
+#set up the dbus
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+#Start up the bar(s)!
+exec "waybar"
+exec "waybar --config /home/yujirodogma/.config/waybar/taskbar.jsonc --style /home/yujirodogma/.config/waybar/taskbar.css"
+exec "/home/yujirodogma/scripts/inactive-windows-transparency.py --opacity 0.7"
+#a lightweight policykit frontend 
+exec "lxsession"
+#Wallpaper support
+exec --no-startup-id "swaybg --image ~/Pictures/gruvbox_alley.jpg"
+
+#idle/timeout screen locking with swayidle!(see swaylock and swayidle config)
+exec "swayidle"

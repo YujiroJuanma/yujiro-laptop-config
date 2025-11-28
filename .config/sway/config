@@ -1,0 +1,50 @@
+#My swaywm config for my laptop!
+#Pretty barebones stuff, just starts some of my autorun programs and adds some good keybinds.
+
+#keybindings file:
+include ~/.config/sway/keybinds
+
+#autostarts file:
+include ~/.config/sway/autostarts
+
+
+
+#_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+#Misc section.
+#_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
+
+
+
+#Gaps, just for looks
+gaps inner 2
+gaps outer 2
+
+#my laptop has a weird native res of 1920x1200
+output eDP-1 pos 0 0 res 1920x1200 
+
+#Adds a light border around active window, also makes it look cool.(follows nord theme.)
+for_window [class=".*"] border pixel 2
+client.focused          #98971a #98971a #2e3440 #98971a #98971a
+client.focused_inactive #98971a #282828 #d8dee9 #282828 #282828
+client.unfocused        #282828 #282828 #d8dee9 #282828 #282828
+client.urgent           #bf616a #bf616a #eceff4 #bf616a #bf616a
+client.background       #2e3440
+
+
+#disable the default bar.(prefer waybar for its extensive customizability)
+bar {
+   mode invisible
+}
+
+
+#enables tap to click on laptop touchpad.
+input "type:touchpad" {
+    tap enabled
+}
+
+#set repeat to my preferred settings
+input * {
+        repeat_delay 300
+        repeat_rate 50
+}
+
