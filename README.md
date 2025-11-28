@@ -1,3 +1,5 @@
-# My laptop riverwm config!
-## Shares some similarities with my old swaywm setup, just on river!
-Same license, same deal. Do whatever, _I'm not responsible for any breaking though._
+# My laptop swaywm config!
+## Simple clean gruvbox themed swaywm setup for Debian on my laptop!
+
+Pretty basic setup, just has my custom binds and a decent waybar config.
+Pretty much a "clean" port of my old i3 setup from x11, with some wayland/sway specific additions.
