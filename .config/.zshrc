@@ -28,7 +28,6 @@ autoload -U colors && colors
 #Some of my aliases i use
 alias ls="eza -a --icons --group-directories-first --sort=name";
 alias cls="clear && hyfetch";
-
 alias cd="z"
 alias ll="ls -lh"
 alias cat="batcat --theme=gruvbox-dark"
