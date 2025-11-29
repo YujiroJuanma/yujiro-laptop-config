@@ -11,3 +11,11 @@ window#waybar {
     color: #d3c6aa
 }
 
+#custom-updates {
+  color: #ebdbb2;
+  background-color: #282828; /* Red background when updates are available */
+}
+
+#custom-updates.pending-updates {
+  background-color: #ff0000;
+}

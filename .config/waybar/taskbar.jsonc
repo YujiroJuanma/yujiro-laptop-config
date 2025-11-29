@@ -13,6 +13,7 @@
     "wlr/taskbar"
   ],
   "modules-right": [
+    "custom/updates",
     "memory"
   ],
   "wlr/taskbar": {
@@ -40,5 +41,13 @@
   "memory": {
     "format": "RAM {used} / {total} GB"
   },
+  "custom/updates": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/scripts/check-updates.sh",
+    "interval": 7200,
+    "tooltip": true,
+    "on-click": "alacritty -e sudo apt upgrade"
+  }
 }
 
